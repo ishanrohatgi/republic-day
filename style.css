@@ -115,7 +115,7 @@ body{
     }
 }
 
-@media screen and (min-height:800px) and (max-width:700px){
+@media screen and (min-height:600px) and (max-width:700px){
    .heading-container{
     margin-top: 10vh;
    }
