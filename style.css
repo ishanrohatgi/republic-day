@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+}
+.main-wall{
+    width: 100%;
+    height: 70vh;
+    background: 
+      repeating-linear-gradient(90deg, #b79469, #b79469 10px, #d1a27a 10px, #d1a27a 20px),
+      repeating-linear-gradient(90deg, #d1a27a, #d1a27a 10px, #b79469 10px, #b79469 20px);
+    border: 1px solid #ccc; /* Optional: Add border for better visibility */
+}
+.heading-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.flag-img{
+    height: 80px;
+}
+.ind-heading{
+    width: 50%;
+    background: repeating-linear-gradient(
+        -45deg,
+        #8B4513,
+        #8B4513 10px,
+        #A0522D 10px,
+        #A0522D 20px
+      );
+      color: white;
+      text-align: center;
+      padding: 10px 0px;
+      border: 10px inset #4e3e34;  
+
+}
+.tv-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.tv-frame {
+    position: relative;
+    width: 45vw;
+    height: 45vh;
+    border: 20px solid #333; 
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 600px;
+    max-height: 500px;
+  }
+
+  .screen {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    background-color: #000; 
+  }
+
+  .video-embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .speaker{
+    height: 60px;
+  }
+.floor{
+    position: relative;
+    border: 1px solid black;
+    height:30vh ;
+    background-color: #817d7d; /* Set a background color for the floor */
+    background-image: 
+      linear-gradient(to bottom, transparent 95%, #dcdcdc 95%, #dcdcdc),
+      linear-gradient(to bottom, transparent 97%, #a0a0a0 97%, #a0a0a0);
+    background-size: 100% 20px, 100% 20px; /* Adjust the size and spacing of the patterns */
+    background-repeat: repeat; /* Repeat the pattern */
+}
+.kids{
+    position: absolute;
+    left: calc(50% - 125px);
+    width: 250px;
+    top:-80px;
+}
+.kids img{
+    width: 250px;
+    filter: drop-shadow(-5px 10px 50px rgba(0, 0, 0, 0.7));
+}
+
+.window{
+  width: 200px;
+}
+@media screen and (max-width:700px) {
+    body{
+        font-size: 0.5rem;
+    }
+    .tv-frame{
+        height: 30vh;
+        width: 100vw;
+        max-width: 300px;
+        max-height: 200px;
+    }
+
+    .window{
+      display: none;
+    }
+    .flag-img{
+      height: 50px;
+    }
+}
+
+@media screen and (min-height:800px) and (max-width:700px){
+   .heading-container{
+    margin-top: 10vh;
+   }
+    .tv-container{
+      margin-top: 20vh;
+    }
+    .floor{
+      height: 40vh;
+    }
+    .flag-img{
+      height: 50px;
+    }
+}
+@media screen and (min-width:1367px){
+  .tv-container{
+    margin-top: 10vh;
+  }
+  .tv-frame{
+    max-width: 700px;
+  }
+}
